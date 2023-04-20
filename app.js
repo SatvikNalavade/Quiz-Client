@@ -71,5 +71,3 @@ function createQuiz(apiResponse) {
     alert(`Your score is ${score} out of ${questions.length}`);
   }
 }
-
-createQuiz(apiResponse);
