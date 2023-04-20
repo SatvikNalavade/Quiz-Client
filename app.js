@@ -1,9 +1,14 @@
 const form = document.querySelector('#generate-form');
       const responseDiv = document.querySelector('#response');
+const loader = document.getElementById("loader"); 
+       loader.style.display = "none";
 
       form.addEventListener('submit', async (event) => {
         event.preventDefault();
 
+            // Show the loading animation
+loader.style.display = "block";
+            
         const prompt = document.querySelector('#prompt').value;
         console.log(prompt)
         try {
@@ -27,6 +32,9 @@ const form = document.querySelector('#generate-form');
           console.error(error);
           alert(error.message);
         }
+            
+   loader.style.display = "none";
+            
       });
 
 
